@@ -17,7 +17,7 @@ class Name(Field):
 class Phone(Field):
     def __init__(self, value):
         if len(value) != 10 or re.search(r"\D", value):
-            raise ValueError
+            raise ValueError("Incorrect phone number format")
         super().__init__(value)
 
 
